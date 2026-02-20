@@ -1,0 +1,281 @@
+.rat
+{
+    color: var(--text);
+    padding: 2rem 0 5rem;
+    text-align: left;
+}
+
+.rat__hero,
+.rat__section
+{
+    width: min(1100px, calc(100% - 2.5rem));
+    margin: 0 auto;
+}
+
+.rat__hero
+{
+    background:
+        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.22), transparent 45%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 2.6rem;
+}
+
+.rat__heroContent h1
+{
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    margin: 0.2rem 0 0.8rem;
+}
+
+.rat__eyebrow
+{
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.rat__lead
+{
+    color: var(--text-soft);
+    max-width: 62ch;
+    line-height: 1.7;
+}
+
+.rat__chips
+{
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.rat__chips span
+{
+    border-radius: 999px;
+    border: 1px solid rgba(124, 58, 237, 0.5);
+    background: rgba(124, 58, 237, 0.16);
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+}
+
+.rat__actions
+{
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.rat__actions a
+{
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    padding: 0.55rem 1rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.rat__actions a:hover
+{
+    border-color: var(--primary);
+    background: rgba(124, 58, 237, 0.16);
+    transform: translateY(-1px);
+}
+
+.rat__section
+{
+    margin-top: 2rem;
+}
+
+.rat__section h2
+{
+    margin: 0 0 1rem;
+}
+
+.rat__pillars,
+.rat__metrics
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.rat__card,
+.rat__timelineItem,
+.rat__metric,
+.rat__shot
+{
+    background: var(--bg-soft);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.rat__card
+{
+    padding: 1rem;
+}
+
+.rat__card p
+{
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.6;
+}
+
+.rat__timeline
+{
+    display: grid;
+    gap: 0.9rem;
+}
+
+.rat__timelineItem
+{
+    padding: 1rem;
+}
+
+.rat__timelineItem h3
+{
+    margin: 0 0 0.45rem;
+}
+
+.rat__timelineItem p
+{
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.65;
+}
+
+.rat__gallery
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.rat__shot
+{
+    overflow: hidden;
+    margin: 0;
+}
+
+.rat__shot img
+{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.rat__shot figcaption
+{
+    padding: 0.9rem;
+}
+
+.rat__shot h3
+{
+    margin: 0 0 0.35rem;
+    font-size: 0.98rem;
+}
+
+.rat__shot p
+{
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.6;
+    font-size: 0.93rem;
+}
+
+.rat__text
+{
+    color: var(--text-soft);
+    line-height: 1.7;
+    max-width: 70ch;
+}
+
+.rat__videoWrap
+{
+    margin-top: 0.8rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #09090d;
+}
+
+.rat__videoWrap video
+{
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+}
+
+.rat__list
+{
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--text-soft);
+    line-height: 1.8;
+}
+
+.rat__metric
+{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.rat__metric strong
+{
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+
+.rat__metric span
+{
+    color: var(--text-soft);
+}
+
+@media (max-width: 900px)
+{
+
+    .rat__pillars,
+    .rat__metrics,
+    .rat__gallery
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px)
+{
+    .rat
+    {
+        padding-top: 1rem;
+    }
+
+    .rat__hero
+    {
+        padding: 1.4rem;
+    }
+
+    .rat__pillars,
+    .rat__metrics,
+    .rat__gallery
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rat__image
+{
+    margin-top: 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
