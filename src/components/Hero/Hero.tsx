@@ -2,6 +2,16 @@ import { motion } from "framer-motion"
 import "./Hero.scss"
 
 const Hero = () => {
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById("projects")
+        if (projectsSection) {
+            const timeout = setTimeout(() => {
+                projectsSection.scrollIntoView({ behavior: "smooth" })
+            }, 100)
+            return () => clearTimeout(timeout)
+        }
+    }
+
     return (
         <section className="hero">
             <div className="hero-bg" />
@@ -39,15 +49,15 @@ const Hero = () => {
                 </motion.h2>
 
                 <motion.a
-                    href="#projects"
                     className="cta"
                     variants={{
                         hidden: { opacity: 0, y: 40 },
                         visible: { opacity: 1, y: 0 }
                     }}
                     transition={{ duration: 0.8 }}
+                    onClick={scrollToProjects}
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileTap={{ scale: 0.15 }}
                 >
                     Ver proyectos
                 </motion.a>

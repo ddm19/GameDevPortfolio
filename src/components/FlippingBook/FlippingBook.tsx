@@ -6,7 +6,11 @@ const pagesCount = 25;
 const restingAngles = [-34, -32, -30, -28]
 const flippedAngle = -150
 
-const FlippingBook = () => {
+interface FlippingBookProps {
+    mode?: "overlay" | "inline"
+}
+
+const FlippingBook = ({ mode = "overlay" }: FlippingBookProps) => {
     const [current, setCurrent] = useState<number>(-1)
 
     useEffect(() => {
@@ -37,7 +41,7 @@ const FlippingBook = () => {
     }, [])
 
     return (
-        <div className="flippingBook">
+        <div className={`flippingBook${mode === "inline" ? " flippingBook--inline" : ""}`}>
             <div className="book">
                 <div className="flippingBook__pages">
 

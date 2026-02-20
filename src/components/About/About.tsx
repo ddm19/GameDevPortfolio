@@ -6,10 +6,11 @@ const About = () => {
             <h2 className="section__title">Mi proceso</h2>
             <div className="about__content">
                 <p>
-                    Diseño iterativo basado en prototipado rápido, testing constante y análisis de métricas.
+                    Me centro en hacer un proceso iterativo, aprovechando mi background en desarrollo para crear prototipos rápidos y validar ideas de forma eficiente.
                 </p>
                 <p>
-                    Me centro en crear sistemas coherentes, claros y escalables que generen experiencias memorables.
+                    Me centro en crear sistemas coherentes, y con reglas claras, mi especialidad es el rápido entendimiento de sistemas existentes y la creación de
+                    nuevas mecánicas que encajen con ellos.
                 </p>
             </div>
         </Section>

@@ -10,12 +10,13 @@ interface ProjectCardProps {
     description: string
     tags: string[]
     onClick?: () => void
+    delay?: number
 }
 
-const ProjectCard = ({ title, images, description, tags, onClick }: ProjectCardProps) => {
+const ProjectCard = ({ title, images, description, tags, onClick, delay = 4500 }: ProjectCardProps) => {
     const autoplay = useRef(
         Autoplay({
-            delay: 4500,
+            delay: delay,
             stopOnInteraction: false,
             stopOnMouseEnter: true,
         })

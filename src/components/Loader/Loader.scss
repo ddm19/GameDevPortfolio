@@ -45,6 +45,97 @@
     }
 }
 
+.loader--inline
+{
+    position: relative;
+    inset: auto;
+    background: transparent;
+    z-index: auto;
+    gap: 0.55rem;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.loader--inline .loader__title
+{
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    z-index: auto;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.loader--inline .loader__title .base
+{
+    color: var(--text);
+    text-shadow: 1px 1px 6px rgba(151, 105, 230, 0.35);
+}
+
+.loader--inline .loader__title .fill
+{
+    text-shadow: 2px 2px 6px rgba(51, 5, 131, 0.4);
+}
+
+.loader--inline .potion__wrapper
+{
+    width: 2rem;
+    height: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 0;
+}
+
+.loader--inline .potion__wrapper--right
+{
+    left: 0;
+}
+
+.loader--inline .liquids__mask
+{
+    top: 0.625rem;
+    left: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.125rem;
+    border-radius: 0 0 0.625rem 0.625rem;
+}
+
+.loader--inline .liquid.liquid--blue,
+.loader--inline .liquid.liquid--green
+{
+    left: 0.375rem;
+    width: 60%;
+    bottom: 0.3125rem;
+    box-shadow: 0 0 0.45rem rgba(59, 130, 246, 0.45);
+}
+
+.loader--inline .liquid.liquid--green
+{
+    box-shadow: 0 0 0.45rem rgba(74, 222, 128, 0.45);
+}
+
+.loader--inline .bubble
+{
+    bottom: 0.375rem;
+    width: 0.125rem;
+    height: 0.125rem;
+}
+
+.loader--inline .b2
+{
+    width: 0.1875rem;
+    height: 0.1875rem;
+}
+
+.loader--inline .b3
+{
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
 .potion__wrapper
 {
     position: relative;

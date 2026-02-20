@@ -1,0 +1,202 @@
+﻿{
+  "baseClass": "rat",
+  "hero": {
+    "eyebrow": "Caso de Estudio - Nivel de Shooter Táctico",
+    "title": "RAT",
+    "lead": "Diseño de una experiencia tactica, con foco en layout, mecánica de espionaje y foco en esconder un objetivo clave en el mapa. El proyecto incluyo desde la concepcion de la vision de combate, hasta el desarrollo de un prototipo jugable.",
+    "chips": [
+      "Rol: Game Designer",
+      "Area: Level + Systems Design",
+      "Estado: Prototipo y Blockout Iterativo",
+      "Fase de desarrollo: 2Âª Iteración"
+    ],
+    "actions": [
+      {
+        "label": "Ver video",
+        "href": "#rat-video"
+      },
+      {
+        "label": "Volver al portfolio",
+        "to": "/?noLogo=true"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "title": "Descripción del proyecto",
+      "paragraphs": [
+        "Un shooter táctico 2vs2 inspirado en tí­tulos como Counter Strike o Valorant, con una mecánica donde los jugadores pueden observar el POV del enemigo en cualquier momento.",
+        "Un equipo debe esconder un maletín en alguna parte del mapa durante una fase de preparación. Luego el equipo contrario debe encontrar y abrir dicho maletín o eliminar al equipo contrario para ganar la ronda. El diseño del mapa se enfoca en crear rutas distintas para armas largas y cortas, con zonas de control clave que incentivan el uso de la mecánica de espionaje para obtener ventaja táctica."
+      ]
+    },
+    {
+      "type": "pillars",
+      "title": "Pilares de Diseño",
+      "items": [
+        "Enfoque en combate táctico por zonas 2vs2.",
+        "Distinción clara entre 2 rutas principales. Una enfocada a armas largas y otra a corto alcance.",
+        "Planteamiento de una mecánica de esconder un objetivo clave (un maletín) que el equipo atacante debe recuperar para ganar la ronda.",
+        "Diseño de mapa de forma que se incentive el uso de la mecánica de espiar el POV del enemigo."
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "Proceso",
+      "items": [
+        {
+          "title": "1. Research y Referencias",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Esta fase trata sobre buscar inspiración en mapas de shooters tácticos existentes, analizar sus puntos fuertes y debilidades."
+            },
+            {
+              "type": "paragraph",
+              "text": "Las referencias obtenidas para este proyecto incluyen mapas como Inferno o la zona de Túneles subterráneos de Rust"
+            },
+            {
+              "type": "image",
+              "src": "/projects/rat/RAT-References.png",
+              "alt": "Collage de mapas de referencia, incluyendo Inferno y Rust"
+            }
+          ]
+        },
+        {
+          "title": "2. Layout Macro",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "En esta etapa se definió un primer estado del mapa mediante un layout inicial. Clarificando zonas (Larga y corta) y la dispisición de coberturas e interiores"
+            },
+            {
+              "type": "paragraph",
+              "text": "El proceso se iteró hasta definir critical paths de los personajes, tratando de maximizar la cantidad de caminos y rutas escogibles."
+            },
+            {
+              "type": "image",
+              "src": "/projects/rat/RAT-Layout.png",
+              "alt": "Layout inicial del mapa, mostrando zonas largas y cortas, con puntos de interés y rutas principales"
+            }
+          ]
+        },
+        {
+          "title": "3. Blockout Funcional",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "El layout se llevo a un blockout funcional en Unreal Engine, donde se ajustaron las dimensiones y se ajustaron coberturas y zonas."
+            },
+            {
+              "type": "paragraph",
+              "fragments": [
+                {
+                  "text": "Además se añadieron elementos nuevos como túneles y vías de escape, tratando de solucionar "
+                },
+                {
+                  "text": "vías sin salida",
+                  "bold": true
+                },
+                {
+                  "text": " que existían en el mapa."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "Blockout y Layout",
+      "items": [
+        {
+          "src": "/projects/rat/RAT1.gif",
+          "title": "Larga / Tren",
+          "caption": [
+            {
+              "type": "paragraph",
+              "text": "Esta zona busca ser un punto de control y escondite clave. Con zonas de larga visión y el tren como punto de escondite y defensa de maletín."
+            }
+          ]
+        },
+        {
+          "src": "/projects/rat/RAT2.gif",
+          "title": "Túnel y Ruta de Escape en Larga",
+          "caption": [
+            {
+              "type": "paragraph",
+              "text": "Esta vía de escape se ideó como solución a una vía sin salida para un equipo en la zona de larga. La zona alta tiene pensada desventajas como rendijas para que no se pueda usar como ventaja táctica sino solo como ruta de escape o flanqueo."
+            }
+          ]
+        },
+        {
+          "src": "/projects/rat/RAT3.gif",
+          "title": "Zona Corta y Túnel Flanqueo",
+          "caption": [
+            {
+              "type": "paragraph",
+              "text": "Esta zona está pensada para el uso de armas cortas, con muchas coberturas y puntos de control. Además el túnel busca compensar una ventaja táctica del equipo que tiene más cerca la sala central y una mejor disposición de coberturas."
+            },
+            {
+              "type": "paragraph",
+              "fragments": [
+                {
+                  "text": "Desde el centro se clarifica la salida del túnel mediante una "
+                },
+                {
+                  "text": "luz roja",
+                  "color": "#ff0000"
+                },
+                {
+                  "text": ", de forma que el jugador la vea antes de entrar y pueda saber a dónde lleva fácilmente.\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "id": "rat-video",
+      "title": "Video Walkthrough",
+      "paragraphs": [
+        "Este vídeo muestra un walkthrough del blockout funcional en su versión actual."
+      ],
+      "poster": "/projects/rat/RAT2.gif",
+      "src": "/projects/rat/RAT-Preview.mp4",
+      "sourceType": "video/mp4",
+      "fallback": "Tu navegador no soporta video HTML5. 🤨"
+    },
+    {
+      "type": "list",
+      "title": "Entregables del Proyecto",
+      "items": [
+        "Documento de visión y objetivos de diseño.",
+        "Layout de mapa.",
+        "Blockout jugable con iteraciones versionadas.",
+        "Blockout funcional + capturas de proceso."
+      ]
+    },
+    {
+      "type": "metrics",
+      "title": "Metricas de Iteracion",
+      "items": [
+        {
+          "label": "Ronda de preparación (esconder maletín por el equipo defensor)",
+          "value": "Entre 60 y 120 segundos"
+        },
+        {
+          "label": "Tiempo promedio de ronda (ataque y defensa)",
+          "value": "Entre 2 y 5 minutos"
+        },
+        {
+          "label": "Tiempo promedio en recorrer el mapa (completo)",
+          "value": "Entre 1 y 2 minutos"
+        }
+      ]
+    }
+  ]
+}
+

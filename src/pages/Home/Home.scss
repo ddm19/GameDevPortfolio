@@ -5,3 +5,54 @@
     font-family: "Inter", system-ui, sans-serif;
     min-height: 100vh;
 }
+
+.scrollDownIndicator
+{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    &__mouse
+    {
+        width: 24px;
+        height: 40px;
+        border: 2px solid var(--text-soft);
+        border-radius: 12px;
+        position: relative;
+
+    }
+
+    &__wheel
+    {
+        width: 4px;
+        height: 6px;
+        background: var(--text-soft);
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__arrow
+    {
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid var(--text-soft);
+        border-bottom: 2px solid var(--text-soft);
+        margin-top: 0.5rem;
+
+    }
+}
+
+.green
+{
+    background-color: var(--green)
+}

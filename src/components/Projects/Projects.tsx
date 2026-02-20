@@ -17,10 +17,17 @@ const Projects = () => {
                     title="RAT (Shooter Táctico)"
                     description="Diseño de mecánicas y niveles para un tactical shooter, junto con un prototipo."
                     tags={["Gameplay Design", "Level Design", "Prototype"]}
-                    images={["/RAT1.gif", "/RAT2.gif", "/RAT3.gif"]}
+                    images={["/projects/rat/RAT1.gif", "/projects/rat/RAT2.gif", "/projects/rat/RAT3.gif"]}
                     onClick={() => navigateToProject("RAT")}
                 />
-
+                <ProjectCard
+                    title="Purple Shift (Juego de Puzzles)"
+                    description="Diseño y desarrollo de un juego de puzzles en Unity, con énfasis en mecánicas laberínticas."
+                    tags={["Game Design", "Narrative Design", "Puzzle Mechanics", "Level Design", "Prototype", "Game Development"]}
+                    images={["/projects/purpleshift/purpleShift.png", "/projects/purpleshift/PurpleShift1.gif"]}
+                    onClick={() => navigateToProject("PurpleShift")}
+                    delay={6000}
+                />
             </div>
         </Section>
     )
