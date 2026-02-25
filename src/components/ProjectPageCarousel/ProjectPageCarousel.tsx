@@ -44,7 +44,7 @@ const ProjectPageCarousel = ({ items, settings }: ProjectPageCarouselProps) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
             loop: settings?.loop ?? true,
-            draggable: settings?.draggable ?? true
+            watchDrag: settings?.draggable ?? true
         },
         plugins
     )
