@@ -8,7 +8,7 @@
     backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 2rem;
     z-index: 10;
 
@@ -22,15 +22,53 @@
     {
         display: flex;
         align-items: center;
+        gap: 0.9rem;
     }
 
     &__link
     {
-        margin-left: 2rem;
+        margin-left: 0;
         text-decoration: none;
         color: var(--text-soft);
         font-weight: 500;
         cursor: pointer;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 768px)
+    {
+        height: auto;
+        min-height: 4.375rem;
+        padding: 0.45rem 0.8rem;
+        align-items: center;
+        row-gap: 0.35rem;
+        flex-wrap: wrap;
+
+        &__brand
+        {
+            width: 100%;
+            justify-content: center;
+        }
+
+        &__logo
+        {
+            width: 48px;
+            height: 48px;
+        }
+
+        &__linkContainer
+        {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.35rem 0.6rem;
+        }
+
+        &__link
+        {
+            font-size: 0.9rem;
+            padding: 0.2rem 0.35rem;
+        }
     }
 }
 
