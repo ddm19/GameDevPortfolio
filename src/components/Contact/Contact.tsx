@@ -45,6 +45,12 @@ const Contact = () => {
             setEmailCopied(false)
         }, 1500)
     }
+    const handleDownloadCV = () => {
+        var el = document.createElement("a")
+        el.href = "/CVDaniDomenechMoreno.pdf"
+        el.download = "CV_DanielDomenech.pdf"
+        el.click()
+    }
 
 
     return (
@@ -75,6 +81,14 @@ const Contact = () => {
                 }}
             >
                 Envíame un email <PaperPlaneIcon />
+            </motion.button>
+            <motion.button
+                className="cta cta--secondary contact__submit"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleDownloadCV}
+            >
+                Descarga mi CV <PaperPlaneIcon />
             </motion.button>
             <h2>o</h2>
             <h2 className="contact__subtitle">Envíame un mensaje</h2>
