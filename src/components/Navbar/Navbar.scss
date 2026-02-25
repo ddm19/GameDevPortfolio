@@ -81,10 +81,29 @@
     transform-origin: left center;
     cursor: pointer;
     justify-self: left;
+    gap: 0.35rem;
     pointer-events: auto;
 }
 
 .navbar__linkContainer
 {
     pointer-events: auto;
+}
+
+.navbar .loader--inline .loader__title
+{
+    font-size: 1.55rem;
+    letter-spacing: 0.01em;
+}
+
+.navbar .loader--inline .loader__title .base
+{
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65), 0 0 8px rgba(124, 58, 237, 0.45);
+    -webkit-text-stroke: 0.35px rgba(130, 9, 130, 0.2);
+}
+
+.navbar .loader--inline .loader__title .fill
+{
+    display: none;
 }
