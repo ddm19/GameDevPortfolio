@@ -393,7 +393,7 @@ const ProjectPage = ({ data }: ProjectPageProps) => {
                                 </p>
                             ))}
                             <div className={className("videoWrap")}>
-                                <video controls preload="metadata" poster={section.poster}>
+                                <video controls preload="metadata" poster={section.poster} playsInline>
                                     <source src={section.src} type={section.sourceType} />
                                     {section.fallback}
                                 </video>

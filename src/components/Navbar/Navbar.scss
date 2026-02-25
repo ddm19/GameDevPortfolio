@@ -11,6 +11,7 @@
     justify-content: space-between;
     padding: 0 2rem;
     z-index: 10;
+    pointer-events: none;
 
     &__logo
     {
@@ -33,6 +34,7 @@
         font-weight: 500;
         cursor: pointer;
         white-space: nowrap;
+        pointer-events: auto;
     }
 
     @media (max-width: 768px)
@@ -79,4 +81,10 @@
     transform-origin: left center;
     cursor: pointer;
     justify-self: left;
+    pointer-events: auto;
+}
+
+.navbar__linkContainer
+{
+    pointer-events: auto;
 }

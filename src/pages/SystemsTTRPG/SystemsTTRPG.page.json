@@ -13,11 +13,11 @@
     "actions": [
       {
         "label": "Ver Guía de Alquimia",
-        "to": "#"
+        "to": "https://homebrewery.naturalcrit.com/share/j0IIvp_kfLX4"
       },
       {
         "label": "Ver Raza Floralia",
-        "to": "#"
+        "to": "https://hispania.thedm.es/article/Floralias"
       },
       {
         "label": "Volver al portfolio",

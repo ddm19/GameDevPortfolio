@@ -225,13 +225,15 @@
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: #09090d;
+    aspect-ratio: 16 / 9;
 }
 
 .rat__videoWrap video
 {
     width: 100%;
+    height: 100%;
     display: block;
-    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .rat__list
