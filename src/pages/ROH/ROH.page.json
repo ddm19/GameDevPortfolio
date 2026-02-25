@@ -1,0 +1,192 @@
+﻿{
+  "baseClass": "rat",
+  "hero": {
+    "eyebrow": "Caso de Estudio - Diseño de TCG y Sistemas",
+    "title": "Runes Of Hispania (ROH)",
+    "lead": "Diseño integral de un Juego de Cartas Coleccionables (TCG) basado en una premisa radical: tu mazo es tu total de vida. El proyecto se centra en mitigar la frustración del RNG clásico y añadir profundidad táctica mediante combate espacial y economía de robo del mazo.",
+    "chips": [
+      "Rol: Game Designer & Systems Designer",
+      "Área: Diseño de Reglas, Balance y Economía",
+      "Estado: Prototipo y Playtesting de Reglas",
+      "Fase de desarrollo: Iteración de mecánicas core y nuevas cartas"
+    ],
+    "actions": [
+      {
+        "label": "Volver al portfolio",
+        "to": "/?noLogo=true"
+      },
+      {
+        "label": "Ver Galería de Cartas",
+        "href": "https://hispania.thedm.es/Cards"
+      }
+      
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "title": "La Premisa y la Visión",
+      "paragraphs": [
+        "El mayor reto de este proyecto fue diseñar un TCG donde la condición de derrota es no poder robar cartas (Deckout/Mill), convirtiendo al propio mazo principal en la barra de salud del jugador.",
+        "Esto obligó a replantear todos los sistemas tradicionales del género: si recibir daño te descarta cartas, ¿cómo evitas que el jugador se quede sin recursos para jugar?",
+        "La respuesta fue crear una economía de doble mazo (Principal y Maná/Zeón) y un sistema de robo táctico que fuerza al jugador a tomar decisiones de riesgo/recompensa cada turno."
+      ]
+    },
+    {
+      "type": "pillars",
+      "title": "Pilares de Diseño",
+      "items": [
+        "Mitigación de RNG: Separación del mazo principal y el mazo de Maná (Zeón) para erradicar las partidas donde un jugador 'no puede jugar' por mala suerte en el robo. Dándole más control al jugador sobre su destino.",
+        "Economía de Riesgo/Recompensa: Robar cartas te acerca a la derrota. El jugador debe balancear constantemente el tempo de su mano con la preservación de su mazo.",
+        "Combate Espacial : El posicionamiento en la mesa es vital. El orden de resolución y las áreas de efecto convierten el tablero en un puzzle táctico.",
+        "Identidad de Mazo: Uso de Héroes evolutivos y Líderes como anclas mecánicas y narrativas, recompensando al jugador por construir sinergias específicas."
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "Sistemas y Mecánicas Principales",
+      "items": [
+        {
+          "title": "1. El Problema del Aggro y la Fase de Robo",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "En los TCG clásicos, los mazos rápidos (aggro) vacían su mano rápidamente y acaban frustrados dependiendo del azar de la carta superior (topdecking). Para solucionarlo, implementé una regla core al final del turno."
+            },
+            {
+              "type": "paragraph",
+              "fragments": [
+                {
+                  "text": "El jugador debe elegir entre: "
+                },
+                {
+                  "text": "Robar hasta tener 5 cartas",
+                  "bold": true
+                },
+                {
+                  "text": " O "
+                },
+                {
+                  "text": "rellenar su Zeón (Maná).",
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Esto permite al aggro no quedarse nunca sin opciones, pero paga un precio altísimo: al robar agresivamente, reduce su propia 'vida'. Si se ve en peligro, puede optar por robar del mazo de Zeón, deteniendo su sangrado pero renunciando a robar nueva ofensiva."
+            },
+            {
+              "type": "paragraph",
+              "text": "Al ser un mazo de 30 cartas y manos de 5, si un jugador roba demasiadas cartas, tardará pocos turnos en perder."
+            }
+          ]
+        },
+        {
+          "title": "2. Economía de Doble Mazo (Zeón vs Acción)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Dado que recibir daño implica descartar cartas, mezclar el maná con las acciones castigaría doblemente al jugador (perdería Vida y Maná / Zeón al mismo tiempo)."
+            },
+            {
+              "type": "paragraph",
+              "text": "Tener un mazo de Zeón completamente independiente asegura que los jugadores siempre tienen agencia. La decisión recae en la gestión táctica del recurso por parte del jugador, eliminando el clásico 'mana screw' o 'mana flood'."
+            },
+            {
+              "type": "image",
+              "src": "/projects/ROH/zeon.png",
+              "alt": "Disposición en mesa del mazo principal y el mazo de Zeón"
+            }
+          ]
+        },
+        {
+          "title": "3. Combate Espacial y Resolución (Izquierda a Derecha)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "El tablero funciona como un escenario táctico. Las criaturas atacan (Purgan) de izquierda a derecha de forma secuencial. Esto no es solo un detalle visual: el orden de ataque dicta exactamente cuándo saltan los triggers y respuestas."
+            },
+            {
+              "type": "paragraph",
+              "text": "Mecánicas como 'Fluir' (que cambia a las criaturas de posición) o 'Barrido' (adyacentes) obligan al jugador a planificar el posicionamiento exacto de cada carta al jugarla, asemejándose a un tablero de ajedrez."
+            },
+            {
+              "type": "image",
+              "src": "/projects/ROH/board.png",
+              "alt": "Esquema de combate espacial"
+            }
+          ]
+        },
+        {
+          "title": "4. Deckbuilding: Héroes Evolutivos y Líderes",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para fomentar el apego del jugador hacia sus mazos, se introdujo el concepto de Cartas de Héroe. Estas cartas evolucionan o 'suben de nivel' al cumplir condiciones narrativo-mecánicas durante la partida (por ejemplo: 'Te he visto indagar 10 cartas o He hecho 10 de daño')."
+            },
+            {
+              "type": "paragraph",
+              "text": "Esto otorga a cada arquetipo una identidad fuerte y proporciona al jugador micro-objetivos durante la partida, añadiendo capas de estrategia más allá de la simple carrera por hacer daño."
+            },
+            {
+              "type": "carousel",
+              "title": "Ejemplo de Héroes",
+              "settings": {
+                "autoplay": false,
+                "loop": true,
+                "stopOnMouseEnter": true,
+                "showDots": true,
+                "showArrows": true
+                },
+              "items": [
+                { "src": "/projects/ROH/dellion1.png", "title": "Dellion forma base" },
+                { "src": "/projects/ROH/dellion2.png", "title": "Dellion evolucionado" },
+                { "src": "/projects/ROH/viren1.png", "title": "Viren forma base" },
+                { "src": "/projects/ROH/viren2.png", "title": "Viren evolucionado" },
+                { "src": "/projects/ROH/barry1.png", "title": "Barry forma base" },
+                { "src": "/projects/ROH/barry2.png", "title": "Barry evolucionado"}
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Además, cada mazo funciona con un líder, que dictamina los colores de cartas disponibles, es una criatura jugable que siempre tiene disponible (independiente a la mano) y tiene un poder jugable 1 vez por turno que tiene sinergia con la criatura"
+            },
+            {
+              "type": "paragraph",
+              "text": "Esto refuerza la identidad de cada mazo y añade una capa adicional de estrategia, ya que el jugador debe decidir cuándo usar el poder del líder para maximizar su impacto en la partida."
+            },
+            {
+              "type": "image",
+              "src": "/projects/ROH/leader.png",
+              "alt": "Diseño de carta de Líder"
+            },
+            {
+              "type": "image",
+              "src": "/projects/ROH/leader2.png",
+              "alt": "Diseño de poder de Líder"
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Estado actual y Desarrollo",
+      "paragraphs": [
+        "El proyecto se encuentra en una fase de playtesting iterativo, ajustando el balance de los costes de Zeón y la cadencia de robo. La prioridad actual es asegurar que la principal mecánica de purgar (quitar cartas de tu librería) no se sienta frustrante, además de asegurar el balanceo de todas las cartas.",
+        "Actualmente existe un repositorio de cartas en constante crecimiento y balanceo que sirven como base para los testeos."
+      ]
+    },
+    {
+      "type": "action",
+      "actions": [
+        {
+          "label": "Explorar la Galería de Cartas",
+          "href": "https://hispania.thedm.es/Cards"
+        }
+      ]
+    }
+  ]
+}

@@ -36,7 +36,6 @@ const Home = () => {
                 )}
             </AnimatePresence>
 
-            <Navbar />
 
             <div className="scrollDownIndicator">
 

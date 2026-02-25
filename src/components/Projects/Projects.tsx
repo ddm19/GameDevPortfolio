@@ -36,7 +36,13 @@ const Projects = () => {
                     onClick={() => navigateToProject("SystemsTTRPG")}
                     delay={6200}
                 />
-
+                <ProjectCard
+                    title="ROH (Juego de Cartas)"
+                    description="Diseño de un juego de cartas de esbirros donde la vida es el propio mazo de cartas."
+                    tags={["Card Game Design", "Narrative Design", "Game Mechanics", "Balance"]}
+                    images={["/projects/ROH/ROH1.png", "/projects/ROH/ROH2.png", "/projects/ROH/ROH3.png"]}
+                    onClick={() => navigateToProject("ROH")}
+                />
             </div>
         </Section>
     )

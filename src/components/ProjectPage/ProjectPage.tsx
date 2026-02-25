@@ -1,10 +1,7 @@
 import { motion } from "framer-motion"
-import Autoplay from "embla-carousel-autoplay"
-import useEmblaCarousel from "embla-carousel-react"
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react"
+import { type ReactNode } from "react"
 import { Link } from "react-router-dom"
-import "./ProjectPage.scss"
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
+import ProjectPageCarousel from "components/ProjectPageCarousel/ProjectPageCarousel"
 
 export interface TextFragment {
     text: string
@@ -50,7 +47,8 @@ export interface CarouselBlock {
 
 export interface ActionBlock {
     type: "action"
-    actions: HeroAction[]
+    actions?: HeroAction[]
+    action?: HeroAction[]
 }
 
 export type ContentBlock = ParagraphBlock | ImageBlock | CarouselBlock | ActionBlock
@@ -127,6 +125,14 @@ export interface VideoSection {
     fallback: string
 }
 
+export interface ActionSection {
+    type: "action"
+    id?: string
+    title?: string
+    actions?: HeroAction[]
+    action?: HeroAction[]
+}
+
 export interface ListSection {
     type: "list"
     id?: string
@@ -152,6 +158,7 @@ export type ProjectPageSection =
     | TimelineSection
     | GallerySection
     | CarouselSection
+    | ActionSection
     | VideoSection
     | ListSection
     | MetricsSection
@@ -166,146 +173,32 @@ interface ProjectPageProps {
     data: ProjectPageData
 }
 
-interface ProjectPageCarouselProps {
-    items: CarouselItem[]
-    settings?: CarouselSettings
-    renderParagraph: (block: ParagraphBlock, key: string) => ReactNode
-}
-
-const ProjectPageCarousel = ({ items, settings, renderParagraph }: ProjectPageCarouselProps) => {
-    const plugins = useMemo(() => {
-        if (settings?.autoplay === false) {
-            return []
-        }
-        return [
-            Autoplay({
-                delay: settings?.delay ?? 4500,
-                stopOnInteraction: settings?.stopOnInteraction ?? false,
-                stopOnMouseEnter: settings?.stopOnMouseEnter ?? true
-            })
-        ]
-    }, [settings?.autoplay, settings?.delay, settings?.stopOnInteraction, settings?.stopOnMouseEnter])
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: settings?.loop ?? true }, plugins)
-    const [selectedIndex, setSelectedIndex] = useState(0)
-    const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
-    const [canScrollPrev, setCanScrollPrev] = useState(false)
-    const [canScrollNext, setCanScrollNext] = useState(false)
-    const showDots = settings?.showDots ?? false
-    const showArrows = settings?.showArrows ?? false
-
-    const onUpdate = useCallback(() => {
-        if (!emblaApi) {
-            return
-        }
-        setSelectedIndex(emblaApi.selectedScrollSnap())
-        setScrollSnaps(emblaApi.scrollSnapList())
-        setCanScrollPrev(emblaApi.canScrollPrev())
-        setCanScrollNext(emblaApi.canScrollNext())
-    }, [emblaApi])
-
-    useEffect(() => {
-        if (!emblaApi) {
-            return
-        }
-        onUpdate()
-        emblaApi.on("select", onUpdate)
-        emblaApi.on("reInit", onUpdate)
-        return () => {
-            emblaApi.off("select", onUpdate)
-            emblaApi.off("reInit", onUpdate)
-        }
-    }, [emblaApi, onUpdate])
-
-    return (
-        <div className="projectPageCarousel">
-            <div className="projectPageCarousel__viewport" ref={emblaRef}>
-                <div className="projectPageCarousel__container">
-                    {items.map((item, index) => (
-                        <figure
-                            key={`${item.title ?? item.src}-${index}`}
-                            className="projectPageCarousel__slide"
-                        >
-                            <img
-                                src={item.src}
-                                alt={item.alt ?? item.title ?? `Slide ${index + 1}`}
-                                loading="lazy"
-                                draggable="false"
-                            />
-                            {(item.title || item.caption?.length) && (
-                                <figcaption className="projectPageCarousel__caption">
-                                    {item.title && <h3>{item.title}</h3>}
-                                    {item.caption?.map((block, blockIndex) =>
-                                        renderParagraph(block, `${item.title ?? index}-${blockIndex}`)
-                                    )}
-                                </figcaption>
-                            )}
-                        </figure>
-                    ))}
-                </div>
-                {showArrows && (
-                    <div className="projectPageCarousel__arrows">
-                        <motion.button
-
-                            type="button"
-                            className="projectPageCarousel__arrow"
-                            onClick={() => emblaApi?.scrollPrev()}
-                            disabled={!canScrollPrev}
-                            aria-label="Slide anterior"
-                            whileHover={{ transform: "translateX(-4px)" }}
-                            whileTap={{ scale: 0.80, transform: "translateX(-10px)" }}
-
-                        >
-                            <ArrowLeftIcon />
-                        </motion.button>
-                        <motion.button
-                            type="button"
-                            className="projectPageCarousel__arrow"
-                            onClick={() => emblaApi?.scrollNext()}
-                            disabled={!canScrollNext}
-                            aria-label="Slide siguiente"
-                            whileHover={{ transform: "translateX(4px)" }}
-                            whileTap={{ scale: 0.80, transform: "translateX(10px)" }}
-
-                        >
-                            <ArrowRightIcon />
-                        </motion.button>
-                    </div>
-                )}
-            </div>
-
-            {showDots && scrollSnaps.length > 1 && (
-                <div className="projectPageCarousel__dots">
-                    {scrollSnaps.map((_, index) => (
-                        <button
-                            type="button"
-                            key={`dot-${index}`}
-                            className={`projectPageCarousel__dot${index === selectedIndex ? " is-active" : ""}`}
-                            onClick={() => emblaApi?.scrollTo(index)}
-                            aria-label={`Ir al slide ${index + 1}`}
-                        />
-                    ))}
-                </div>
-            )}
-        </div>
-    )
-}
-
 const ProjectPage = ({ data }: ProjectPageProps) => {
     const className = (element?: string) => (element ? `${data.baseClass}__${element}` : data.baseClass)
 
-    const renderActions = (actions: HeroAction[], keyPrefix: string) => (
+    const renderActions = (actions: HeroAction[] | undefined, keyPrefix: string) => (
         <div className={className("actions")}>
-            {actions.map((action, index) => {
+            {(actions ?? []).filter(Boolean).map((action, index) => {
                 const key = `${keyPrefix}-${action.label}-${index}`
-                if (action.to) {
+                const isExternalTo = Boolean(action.to && /^(https?:)?\/\//.test(action.to))
+                if (action.to && !isExternalTo) {
                     return (
                         <Link key={key} to={action.to}>
                             {action.label}
                         </Link>
                     )
                 }
+                if (action.href || action.to) {
+                    const url = action.href ?? action.to ?? "#"
+                    const isExternal = /^(https?:)?\/\//.test(url)
+                    return (
+                        <a key={key} href={url} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined}>
+                            {action.label}
+                        </a>
+                    )
+                }
                 return (
-                    <a key={key} href={action.href}>
+                    <a key={key} href="#">
                         {action.label}
                     </a>
                 )
@@ -339,15 +232,21 @@ const ProjectPage = ({ data }: ProjectPageProps) => {
 
     const renderBlock = (block: ContentBlock, key: string): ReactNode => {
         if (block.type === "action") {
-            return renderActions(block.actions, key)
+            return renderActions(block.actions ?? block.action, key)
         }
         if (block.type === "carousel" || block.type === "gallery") {
             return (
                 <ProjectPageCarousel
                     key={key}
-                    items={block.items}
+                    items={block.items.map((item, itemIndex) => ({
+                        src: item.src,
+                        alt: item.alt,
+                        title: item.title,
+                        caption: item.caption?.map((captionBlock, captionIndex) =>
+                            renderParagraph(captionBlock, `${key}-${itemIndex}-${captionIndex}`)
+                        )
+                    }))}
                     settings={block.settings}
-                    renderParagraph={renderParagraph}
                 />
             )
         }
@@ -461,10 +360,25 @@ const ProjectPage = ({ data }: ProjectPageProps) => {
                         <section key={`${section.title}-${sectionIndex}`} id={section.id} className={className("section")}>
                             <h2>{section.title}</h2>
                             <ProjectPageCarousel
-                                items={section.items}
+                                items={section.items.map((item, itemIndex) => ({
+                                    src: item.src,
+                                    alt: item.alt,
+                                    title: item.title,
+                                    caption: item.caption?.map((captionBlock, captionIndex) =>
+                                        renderParagraph(captionBlock, `${section.title}-${itemIndex}-${captionIndex}`)
+                                    )
+                                }))}
                                 settings={section.settings}
-                                renderParagraph={renderParagraph}
                             />
+                        </section>
+                    )
+                }
+
+                if (section.type === "action") {
+                    return (
+                        <section key={`${section.title ?? "action"}-${sectionIndex}`} id={section.id} className={className("section")}>
+                            {section.title ? <h2>{section.title}</h2> : null}
+                            {renderActions(section.actions ?? section.action, `section-actions-${sectionIndex}`)}
                         </section>
                     )
                 }

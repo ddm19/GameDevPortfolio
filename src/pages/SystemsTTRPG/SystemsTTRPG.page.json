@@ -24,7 +24,7 @@
         "to": "/?noLogo=true"
       }
     ]
-  },
+  }, 
   "sections": [
     {
       "type": "text",
@@ -138,7 +138,7 @@
       "type": "action",
       "actions": [
         { "label": "Ver más objetos y sistemas", "href": "https://homebrewery.naturalcrit.com/user/Danielissero?sort=alpha&dir=asc" },
-        { "label": "Ver más razas y reglas", "to": "https://hispania.thedm.es/Rules" }
+        { "label": "Ver más razas y reglas", "to": "https://hispania.thedm.es/Rules?defaultRule=Razas" }
       ]
     }
   ]
