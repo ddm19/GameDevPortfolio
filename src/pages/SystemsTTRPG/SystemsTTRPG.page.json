@@ -1,0 +1,145 @@
+{
+  "baseClass": "rat",
+  "hero": {
+    "eyebrow": "Caso de Estudio - Diseño de Sistemas TTRPG",
+    "title": "D&D 5e: Expansión de Sistemas",
+    "lead": "Diseño de un sistema de crafting (Herbología y Alquimia) y módulos de creación de personajes para D&D 5e. Nace de la necesidad de dar profundidad narrativa y mecánica a los jugadores mediante sistemas opcionales, balanceados e integrados orgánicamente en la economía del juego base.",
+    "chips": [
+      "Rol: Systems Designer",
+      "Área: Diseño de Sistemas, Balance y Economía",
+      "Estado: Playtesting en vivo",
+      "Fase de desarrollo: Iteración y ajuste de balance"
+    ],
+    "actions": [
+      {
+        "label": "Ver Guía de Alquimia",
+        "to": "#"
+      },
+      {
+        "label": "Ver Raza Floralia",
+        "to": "#"
+      },
+      {
+        "label": "Volver al portfolio",
+        "to": "/?noLogo=true"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "title": "El Problema y la Visión",
+      "paragraphs": [
+        "El proyecto surgió de una necesidad real en mesa: un jugador quería enfocarse en la alquimia como pilar narrativo, pero se desmotivaba porque el sistema original de D&D 5e es demasiado plano y carece de un bucle jugable (gameplay loop) interesante.",
+        "La visión fue crear un sistema de recolección y crafteo propio que cumpliera dos condiciones: ser completamente opcional (no requiere escoger una clase específica) y ser adicional (cualquier personaje puede invertir tiempo y recursos en él si le interesa). El resultado es un subsistema robusto con su propia economía, escalado de dificultad y gestión de riesgos."
+      ]
+    },
+    {
+      "type": "pillars",
+      "title": "Pilares de Diseño",
+      "items": [
+        "Accesibilidad Agnóstica: Cualquier clase puede interactuar con el sistema; la progresión se basa en el uso de herramientas y exploración, no en el nivel del personaje.",
+        "Escalado Matemático: Fórmulas claras para calcular la Dificultad (CD) de las pociones en base a la cantidad y rareza de los modificadores añadidos.",
+        "Riesgo vs. Recompensa: Implementación de tiempos de creación, requisitos de equipo (Viales vs. Laboratorio) y mecánicas de fallo (Intoxicación, Magia Salvaje).",
+        "Modularidad General: Este enfoque de piezas encajables se creó de forma que puedan añadirse y quitarse a un personaje sin afectar la base, donde el propio jugador establece la profundidad y dificultad que desea para su personaje."
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "Proceso de Diseño",
+      "items": [
+        {
+          "title": "1. Diseño del Gameplay Loop (Alquimia)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Se estructuró un ciclo de juego claro: Recolección → Clasificación → Elaboración → Uso / Venta."
+            },
+            {
+              "type": "paragraph",
+              "text": "Se crearon tablas de 'loot' dinámicas donde los resultados dependen del entorno (8 ecosistemas) y el tiempo invertido por el jugador, asegurando un mínimo de ingredientes siempre."
+            },
+            {
+              "type": "image",
+              "src": "/projects/ttrpg/ingredients_table.png",
+              "alt": "Tablas de recolección por biomas"
+            }
+          ]
+        },
+        {
+          "title": "2. Balance y Fórmulas Matemáticas",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para evitar que el sistema rompiese el juego a niveles altos, se diseñó una fórmula de dificultad aditiva. Cuantos más modificadores tiene una poción, más difícil y arriesgado es crearla."
+            },
+            {
+              "type": "paragraph",
+              "fragments": [
+                {
+                  "text": "Fórmula de Dificultad (CD): "
+                },
+                {
+                  "text": "$CD = 10 + MOD1 + MOD2 + BPMOD + SOLVMOD$",
+                  "bold": true
+                },
+                {
+                  "text": "donde cada modificador añade un valor específico marcado por la tabla. Además de los solventes especiales"
+                }
+              ]
+            },
+          {
+            "type": "paragraph",
+            "text": "También se añadieron reglas opcionales para el balanceo de estas reglas como por ejemplo la caducidad de ingredientes o la intoxicación por consumir demasiadas pociones."
+          }         ]
+        },
+        {
+          "title": "3. Economía y Sink de Recursos",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Se integró un sistema de economía donde los jugadores pueden vender tanto ingredientes como pociones. Además, la venta incluye un factor de riesgo mediante 'compradores turbios', añadiendo narrativa y balance a las transacciones."
+            },
+            {
+              "type": "image",
+              "src": "/projects/ttrpg/sell_table.png",
+              "alt": "Tabla de economía y venta de pociones"
+            }
+          ]
+        },
+        {
+          "title": "4. Diseño de Sistemas de Personaje (Floralias)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "También se diseñó la raza 'Floralia'. En lugar de stats estáticos, el jugador cruza dos variables escogibles al crear el personaje."
+            },
+            {
+              "type": "image",
+              "src": "/projects/ttrpg/floralias_table.png",
+              "alt": "Esquema modular de la raza Floralia"
+            },
+            {
+              "type": "paragraph",
+              "text": "La idea con estas dos características era la de poder crear cualquier tipo de planta humanoide cruzando solamente 2 variables, de forma que la narrativa que el jugador quiere dar pueda cumplirse fácilmente."}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Estado actual y Playtesting",
+      "paragraphs": [
+        "La mayoría de sistemas se encuentran actualmente en fase de playtesting en campañas en vivo. Los números y tiempos de creación se están ajustando iterativamente basándome en el feedback de los jugadores para evitar la sobre-acumulación de recursos y asegurar que la economía del mundo permanezca estable.",
+        "Además de los sistemas creados existen otros sistemas que he creado o adaptado, tanto objetos como nuevas razas"
+      ]
+    },
+    {
+      "type": "action",
+      "actions": [
+        { "label": "Ver más objetos y sistemas", "href": "https://homebrewery.naturalcrit.com/user/Danielissero?sort=alpha&dir=asc" },
+        { "label": "Ver más razas y reglas", "to": "https://hispania.thedm.es/Rules" }
+      ]
+    }
+  ]
+}

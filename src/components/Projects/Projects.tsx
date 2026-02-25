@@ -28,6 +28,15 @@ const Projects = () => {
                     onClick={() => navigateToProject("PurpleShift")}
                     delay={6000}
                 />
+                <ProjectCard
+                    title="D&D 5e: Expansión de Sistemas"
+                    description="Diseño de un sistema de crafting (Herbología y Alquimia) y subsistemas para D&D 5e. Foco en balance matemático, riesgo/recompensa y economía de juego."
+                    tags={["Systems Design", "Economy & Balance", "Tabletop RPG", "Math & Spreadsheets", "Game Design", "Playtesting"]}
+                    images={["/projects/ttrpg/alchemy.png", "/projects/ttrpg/floralias.png", "/projects/ttrpg/ranidos.png"]}
+                    onClick={() => navigateToProject("SystemsTTRPG")}
+                    delay={6200}
+                />
+
             </div>
         </Section>
     )
