@@ -33,6 +33,15 @@
       ]
     },
     {
+      "type": "text",
+      "title": "Mi aportaci\u00f3n al proyecto",
+      "paragraphs": [
+        "Dise\u00f1\u00e9 desde cero el sistema base del TCG, incluyendo una condici\u00f3n de victoria alternativa donde el mazo funciona como salud del jugador.",
+        "Implement\u00e9 una econom\u00eda de doble mazo (Ze\u00f3n/Acci\u00f3n) para mitigar el RNG cl\u00e1sico y reducir problemas de recursos.",
+        "Estructur\u00e9 las reglas de combate espacial con resoluci\u00f3n secuencial para aumentar la profundidad t\u00e1ctica del posicionamiento."
+      ]
+    },
+    {
       "type": "pillars",
       "title": "Pilares de Diseño",
       "items": [

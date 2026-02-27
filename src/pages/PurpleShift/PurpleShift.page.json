@@ -1,4 +1,4 @@
-﻿{
+{
   "baseClass": "rat",
   "hero": {
     "eyebrow": "Caso de Estudio - Juego de puzzles",
@@ -26,6 +26,15 @@
     ]
   },
   "sections": [
+    {
+      "type": "text",
+      "title": "Mi aportaci\u00f3n al proyecto",
+      "paragraphs": [
+        "Dise\u00f1\u00e9 y prototip\u00e9 las mec\u00e1nicas centrales del juego, basadas en la alteraci\u00f3n de estados l\u00f3gicos mediante puertas de colores.",
+        "Estructur\u00e9 la curva de dificultad en niveles incrementales para introducir reglas y combinaciones de forma progresiva.",
+        "Defin\u00ed el enfoque de dise\u00f1o para ense\u00f1ar al jugador a trav\u00e9s del propio nivel, minimizando la dependencia de tutoriales intrusivos."
+      ]
+    },
     {
       "type": "text",
       "title": "Descripción del proyecto",
@@ -73,7 +82,7 @@
               "alt": "Referencia estética y de cámara para el proyecto."
             },
             {
-              "type":"image",
+              "type": "image",
               "src": "/projects/purpleshift/volume.png",
               "alt": "Referencia juego de sigilo."
             }
@@ -91,10 +100,9 @@
               "text": "Además se definió el tipo de cámara, la estética y el tipo de narrativa que se quería contar."
             },
             {
-                "type": "image",
-                "src": "/projects/purpleshift/purpleShift_OnePager.png",
-                "alt": "One Pager del proyecto, con la visión, pilares de diseño y objetivos de diseño."
-              
+              "type": "image",
+              "src": "/projects/purpleshift/purpleShift_OnePager.png",
+              "alt": "One Pager del proyecto, con la visión, pilares de diseño y objetivos de diseño."
             }
           ]
         },
@@ -120,48 +128,75 @@
                 "showArrows": true
               },
               "items": [
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_1.jpg", "title": "Portada del Ten Pager" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_2.jpg", "title": "Introducción del juego y Flujo" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_3.jpg", "title": "Personajes" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_4.jpg", "title": "Gameplay y USPs junto a Diagrama de flujo" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_5.jpg", "title": "Mundo de juego" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_6.jpg", "title": "Experiencia de juego"},
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_7.jpg", "title": "Mecánicas" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_8.jpg", "title": "Objetos, interactuables, coleccionables y habilidades" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_9.jpg", "title": "Definición de narrativa ambiental" },
-                { "src": "/projects/purpleshift/PurpleShift_TenPager_10.jpg", "title": "Definición de historia y lore" }
-              
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_1.jpg",
+                  "title": "Portada del Ten Pager"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_2.jpg",
+                  "title": "Introducción del juego y Flujo"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_3.jpg",
+                  "title": "Personajes"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_4.jpg",
+                  "title": "Gameplay y USPs junto a Diagrama de flujo"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_5.jpg",
+                  "title": "Mundo de juego"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_6.jpg",
+                  "title": "Experiencia de juego"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_7.jpg",
+                  "title": "Mecánicas"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_8.jpg",
+                  "title": "Objetos, interactuables, coleccionables y habilidades"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_9.jpg",
+                  "title": "Definición de narrativa ambiental"
+                },
+                {
+                  "src": "/projects/purpleshift/PurpleShift_TenPager_10.jpg",
+                  "title": "Definición de historia y lore"
+                }
               ]
             }
           ]
-      },
-      {
-        "title": "4. GDD y Prototipado",
-        "blocks": [
-          {
-            "type": "paragraph",
-            "text": "En esta fase se ha creado el GDD del proyecto, definiendo de manera más detallada las mecánicas, niveles y narrativa del juego."
-          },
-          {
-            "type": "paragraph",
-            "text": "Además se ha creado un prototipo jugable con las mecánicas principales del juego para iterar sobre ellas y testearlas."
-          }
-         
-      ]
-      },
-      {
-        "title": "5. Diseño de algunos niveles",
-        "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Se diseñó un sistema de creación de niveles mediante txt, para hacer fácil el prototipado de niveles y la iteración sobre ellos."
-
-          },
-          {
-            "type": "paragraph",
-            "text": "Se diseñaron los primeros niveles del juego, buscando iterar sobre la dificultad y la introducción de nuevas mecánicas."
-          },
-          {
+        },
+        {
+          "title": "4. GDD y Prototipado",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "En esta fase se ha creado el GDD del proyecto, definiendo de manera más detallada las mecánicas, niveles y narrativa del juego."
+            },
+            {
+              "type": "paragraph",
+              "text": "Además se ha creado un prototipo jugable con las mecánicas principales del juego para iterar sobre ellas y testearlas."
+            }
+          ]
+        },
+        {
+          "title": "5. Diseño de algunos niveles",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Se diseñó un sistema de creación de niveles mediante txt, para hacer fácil el prototipado de niveles y la iteración sobre ellos."
+            },
+            {
+              "type": "paragraph",
+              "text": "Se diseñaron los primeros niveles del juego, buscando iterar sobre la dificultad y la introducción de nuevas mecánicas."
+            },
+            {
               "type": "carousel",
               "title": "Niveles",
               "settings": {
@@ -172,33 +207,36 @@
                 "showArrows": true
               },
               "items": [
-                { "src": "/projects/purpleshift/purpleShift_nivel1.png", "title": "Nivel 1 (En texto)" },
-                { "src": "/projects/purpleshift/purpleShift_nivel2.png", "title": ""},
-                { "src": "/projects/purpleshift/purpleShift_nivel3.png", "title": "" },
-                { "src": "/projects/purpleshift/purpleShift_nivel4.png", "title": "" }
-                
+                {
+                  "src": "/projects/purpleshift/purpleShift_nivel1.png",
+                  "title": "Nivel 1 (En texto)"
+                },
+                {
+                  "src": "/projects/purpleshift/purpleShift_nivel2.png",
+                  "title": ""
+                },
+                {
+                  "src": "/projects/purpleshift/purpleShift_nivel3.png",
+                  "title": ""
+                },
+                {
+                  "src": "/projects/purpleshift/purpleShift_nivel4.png",
+                  "title": ""
+                }
               ]
             }
-        ]
-      }
-      ]},
+          ]
+        }
+      ]
+    },
     {
       "type": "text",
       "title": "Estado actual y próximos pasos",
       "paragraphs": [
         "Actualmente el proyecto se encuentra en fase de diseño y prototipado de mecánicas y niveles",
-         "El próximo paso es seguir iterando sobre el diseño de niveles y mecánicas.",
-         "Se ha dejado en un segundo plano la narrativa para centrarse en la explotación de la mecánica principal"
-      ]      
-    },
-    {
-      "type": "text",
-      "title": "Mi Aportación al proyecto",
-      "paragraphs": [
-        "En este proyecto mi rol ha ido desde concebir la idea inicial, crear los personajes y narrativa así como el diseño de los primeros niveles y mecánicas junto al prototipo jugable."
+        "El próximo paso es seguir iterando sobre el diseño de niveles y mecánicas.",
+        "Se ha dejado en un segundo plano la narrativa para centrarse en la explotación de la mecánica principal"
       ]
     }
-    
   ]
 }
- 

@@ -24,7 +24,7 @@
         "to": "/?noLogo=true"
       }
     ]
-  }, 
+  },
   "sections": [
     {
       "type": "text",
@@ -32,6 +32,15 @@
       "paragraphs": [
         "El proyecto surgió de una necesidad real en mesa: un jugador quería enfocarse en la alquimia como pilar narrativo, pero se desmotivaba porque el sistema original de D&D 5e es demasiado plano y carece de un bucle jugable (gameplay loop) interesante.",
         "La visión fue crear un sistema de recolección y crafteo propio que cumpliera dos condiciones: ser completamente opcional (no requiere escoger una clase específica) y ser adicional (cualquier personaje puede invertir tiempo y recursos en él si le interesa). El resultado es un subsistema robusto con su propia economía, escalado de dificultad y gestión de riesgos."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Mi aportaci\u00f3n al proyecto",
+      "paragraphs": [
+        "Desarroll\u00e9 un sistema modular de recolecci\u00f3n y alquimia con f\u00f3rmulas matem\u00e1ticas escalables para calcular dificultad y \u00e9xito de creaci\u00f3n.",
+        "Dise\u00f1\u00e9 una econom\u00eda interna balanceada, integrando degradaci\u00f3n de recursos y decisiones de comercio con riesgo narrativo.",
+        "Cre\u00e9 m\u00f3dulos de creaci\u00f3n de personaje basados en la intersecci\u00f3n de variables para ampliar opciones t\u00e1cticas sin romper el balance base."
       ]
     },
     {
@@ -88,10 +97,11 @@
                 }
               ]
             },
-          {
-            "type": "paragraph",
-            "text": "También se añadieron reglas opcionales para el balanceo de estas reglas como por ejemplo la caducidad de ingredientes o la intoxicación por consumir demasiadas pociones."
-          }         ]
+            {
+              "type": "paragraph",
+              "text": "También se añadieron reglas opcionales para el balanceo de estas reglas como por ejemplo la caducidad de ingredientes o la intoxicación por consumir demasiadas pociones."
+            }
+          ]
         },
         {
           "title": "3. Economía y Sink de Recursos",
@@ -121,7 +131,8 @@
             },
             {
               "type": "paragraph",
-              "text": "La idea con estas dos características era la de poder crear cualquier tipo de planta humanoide cruzando solamente 2 variables, de forma que la narrativa que el jugador quiere dar pueda cumplirse fácilmente."}
+              "text": "La idea con estas dos características era la de poder crear cualquier tipo de planta humanoide cruzando solamente 2 variables, de forma que la narrativa que el jugador quiere dar pueda cumplirse fácilmente."
+            }
           ]
         }
       ]
@@ -137,8 +148,14 @@
     {
       "type": "action",
       "actions": [
-        { "label": "Ver más objetos y sistemas", "href": "https://homebrewery.naturalcrit.com/user/Danielissero?sort=alpha&dir=asc" },
-        { "label": "Ver más razas y reglas", "to": "https://hispania.thedm.es/Rules?defaultRule=Razas" }
+        {
+          "label": "Ver más objetos y sistemas",
+          "href": "https://homebrewery.naturalcrit.com/user/Danielissero?sort=alpha&dir=asc"
+        },
+        {
+          "label": "Ver más razas y reglas",
+          "to": "https://hispania.thedm.es/Rules?defaultRule=Razas"
+        }
       ]
     }
   ]

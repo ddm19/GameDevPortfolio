@@ -31,6 +31,14 @@
       ]
     },
     {
+      "type": "text",
+      "title": "Mi aportaci\u00f3n al proyecto",
+      "paragraphs": [
+        "Defin\u00ed el layout macro del mapa y sus rutas cr\u00edticas para construir una experiencia t\u00e1ctica clara en formato 2vs2.",
+        "Desarroll\u00e9 el blockout funcional en Unreal Engine, iterando la geometr\u00eda para eliminar cuellos de botella y mejorar los flujos de combate."
+      ]
+    },
+    {
       "type": "pillars",
       "title": "Pilares de Diseño",
       "items": [
@@ -199,4 +207,3 @@
     }
   ]
 }
-
