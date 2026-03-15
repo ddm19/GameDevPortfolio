@@ -31,14 +31,6 @@
       ]
     },
     {
-      "type": "text",
-      "title": "Mi aportaci\u00f3n al proyecto",
-      "paragraphs": [
-        "Defin\u00ed el layout macro del mapa y sus rutas cr\u00edticas para construir una experiencia t\u00e1ctica clara en formato 2vs2.",
-        "Desarroll\u00e9 el blockout funcional en Unreal Engine, iterando la geometr\u00eda para eliminar cuellos de botella y mejorar los flujos de combate."
-      ]
-    },
-    {
       "type": "pillars",
       "title": "Pilares de Diseño",
       "items": [
@@ -178,13 +170,110 @@
       "fallback": "Tu navegador no soporta video HTML5. 🤨"
     },
     {
+      "type": "timeline",
+      "title": "Última iteración",
+      "items": [
+        {
+          "title": "1. Nuevo layout y correcciones",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Se corrigen zonas que no funcionaban. Se elimina el túnel de larga y se sutituye por una pasarela en altura, descubierta pero con buena visión."
+            },
+            {
+              "type": "image",
+              "src": "/projects/rat/RATpasarela.png"
+            },
+            {
+              "type": "paragraph",
+              "text": "Se añade un pasadizo en mitad del mapa, para añadir una nueva ruta de recorrido circular en el mapa. Para evitar que se convierta en una zona de camping, se añade una ventana y hueco en la parte superior. Que lo vuelve vulnerable a utilidad."
+            },
+            {
+              "type": "image",
+              "src": "/projects/rat/RATMiddle.png"
+            }
+          ]
+        },
+        {
+          "title": "2. Planteamiento de zonas de maletín",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A pesar de que el maletín se puede plantar en cualquier zona (salvo conductos), se plantean 4 zonas a nivel de diseño que el mapa favorece de forma natural."
+            },
+            {
+              "type": "gallery",
+              "title": "Blockout y Layout",
+              "settings": {
+                "autoplay": false
+              },
+              "items": [
+                {
+                  "src": "/projects/rat/Zona1.png",
+                  "title": "Zona 1: Abierto en larga",
+                  "caption": [
+                    {
+                      "type": "paragraph",
+                      "text": "Escondite abierto con visión exterior pensado para armas de largo alcance. Sus fortalezas radican en que el atacante queda expuesto sin coberturas y existen muchas zonas desde donde defender y vigilar el maletín. Sin embargo, el maletín es fácilmente encontrable, tiene muchos flancos de ataque, alta dependencia de larga distancia y es vulnerable a granadas de humo. Las coberturas principales son pilares (completa) y zona de interior."
+                    }
+                  ]
+                },
+                {
+                  "src": "/projects/rat/Zona2.png",
+                  "title": "Zona 2: Interior Tren",
+                  "caption": [
+                    {
+                      "type": "paragraph",
+                      "text": "Escondite cerrado con visión exterior reducida, ideal para armas de muy corto alcance. Es un punto fuerte porque el maletín es más difícil de encontrar, hay pocas entradas/salidas y el atacante es muy vulnerable a la utilidad. Sus debilidades son las escasas zonas defensivas, la presencia de coberturas para el atacante y que resulta un punto muy débil si este logra entrar y atrincherarse para defender. Destacan las coberturas de ventanas (parcial) y pared (completa)."
+                    }
+                  ]
+                },
+                {
+                  "src": "/projects/rat/Zona3.png",
+                  "title": "Zona 3: Almacén",
+                  "caption": [
+                    {
+                      "type": "paragraph",
+                      "text": "Escondite cerrado enfocado al combate de corta y media distancia. Ofrece pocas entradas, muy buenas coberturas en defensa y es defendible desde fuera. Por el contrario, sufre por tener varios flancos de ataque, ser vulnerable a un 'rusheo' rápido y permitir que el atacante utilice el interior como su propia fortaleza si lo conquista. Las coberturas son completas en el interior y parciales utilizando los obstáculos del entorno."
+                    }
+                  ]
+                },
+                {
+                  "src": "/projects/rat/Zona4.png",
+                  "title": "Zona 4: Ratas",
+                  "caption": [
+                    {
+                      "type": "paragraph",
+                      "text": "Escondite tipo 'dead-end' (callejón sin salida) para corta y media distancia. Sus grandes ventajas son su dificultad para ser encontrado, las escasas rutas de entrada y la vulnerabilidad del atacante ante el uso de utilidad. Sus puntos débiles incluyen pocas zonas naturales de defensa, ser detectable mediante la mecánica de 'Hackeo de POV' y ser susceptible a un robo silencioso (el atacante puede llevárselo sin ser visto si los defensores pierden la línea de visión). Posee coberturas completas, de altura y parciales."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "id": "rat-video-final",
+      "title": "Walkthrough Final",
+      "paragraphs": [
+        "Muestra del estado actual del mapa con materiales aplicados y ajustes de iluminación."
+      ],
+      "src": "/projects/rat/RAT-Final.mp4",
+      "sourceType": "video/mp4",
+      "fallback": "Tu navegador no soporta video HTML5. 🤨"
+    },
+    {
       "type": "list",
       "title": "Entregables del Proyecto",
       "items": [
-        "Documento de visión y objetivos de diseño.",
         "Layout de mapa.",
         "Blockout jugable con iteraciones versionadas.",
-        "Blockout funcional + capturas de proceso."
+        "Blockout funcional + capturas de proceso.",
+        "Blockout de distinas zonas con leyenda, zonas de ataque, fortalezas y debilidades",
+        "BeatChart con zonas de escondite planteadas"
       ]
     },
     {
@@ -197,7 +286,7 @@
         },
         {
           "label": "Tiempo promedio de ronda (ataque y defensa)",
-          "value": "Entre 2 y 5 minutos"
+          "value": "Entre 5 y 8 minutos"
         },
         {
           "label": "Tiempo promedio en recorrer el mapa (completo)",
