@@ -165,7 +165,7 @@
         "Este vídeo muestra un walkthrough del blockout funcional en su versión actual."
       ],
       "poster": "/projects/rat/RAT2.gif",
-      "src": "/projects/rat/RAT-Preview.mp4",
+      "src": "https://res.cloudinary.com/dk1llqwfi/video/upload/v1773654923/RAT-Preview_y8brid.mp4",
       "sourceType": "video/mp4",
       "fallback": "Tu navegador no soporta video HTML5. 🤨"
     },
@@ -261,7 +261,7 @@
       "paragraphs": [
         "Muestra del estado actual del mapa con materiales aplicados y ajustes de iluminación."
       ],
-      "src": "/projects/rat/RAT-Final.mp4",
+      "src": "https://res.cloudinary.com/dk1llqwfi/video/upload/v1773654923/RAT-Final_jkcgzc.mp4",
       "sourceType": "video/mp4",
       "fallback": "Tu navegador no soporta video HTML5. 🤨"
     },
